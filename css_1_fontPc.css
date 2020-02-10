@@ -1,0 +1,24 @@
+/* elements resize in context to base (body) element. Keywords per modern standards, mean users can easily adjust font as required */
+body {
+    font-size: small;
+}
+/* If goal is size between keyword values , can encapsulate and make changes, e.g. container element and make adjustments as required  */
+/* alternatively could set base size on html element */
+#container {
+    font-size: 95%;
+}
+h1 {
+font-size: 150%;
+}
+h2 {
+    font-size: 130%;
+}
+h3 {
+    font-size: 120%;
+}
+ul li {
+    font-size: 100%;
+}
+.note {
+    font-size: 90%;
+}

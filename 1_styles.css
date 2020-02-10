@@ -1,0 +1,47 @@
+/* elements resize in context to base (body) element. Keywords per modern standards, mean users can easily adjust font as required */
+body {
+    font-size: small;
+}
+/* use WAI-ARIA landmark tag (these are only used once) */
+/* stretch and float ul left (float is out of doc flow), child li elements also float */
+nav[role="navigation"] ul {
+    float: left;
+    width: 720px;
+    margin: 0;
+    padding: 10px 0 0 46px;
+    list-style: none;
+    background: #FFCB2D;
+    /* blend technique with main content (transparent gif), tiles bottom */
+    background: #FFCB2D url(1_blend_active_tile.gif) repeat-x bottom left
+}
+/* li elements float left next to each other */
+nav[role="navigation"] ul li {
+    float: left;
+    margin: 0 1px 0 0;
+    padding: 0;
+    font-family: "Lucida Grande", sans-serif;
+    font-size: 80%;
+
+}
+/* add definition to li links themselves float display blocks for horizontal*/
+/* Note many creators generate gradient style css code, rather than relyig on tiled images as in this example. Lots of code, once generated plug in here instead */
+nav[role="navigation"] ul li a {
+    float: left;
+    display: block;
+    margin: 0;
+    padding: 4px 8px;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #9B8748;
+    border-bottom: none;
+        /* fancy gradient png backgrd img (base colour for transparent section, tiles each link */
+    background: #F9E9A9 url(1_neg_state.png) repeat-x top left;
+}
+/* hover state, increased 1px belends with content*/
+/* selection state, uses descendant selectors, narrows target based on element doc tree order */
+nav[role="navigation"] ul li a:hover, body#intro #t-intro a {
+    color: #333;
+    padding-bottom: 5px;
+    border-color: #727377;
+    background: #FFF url(1_positive_state.png) repeat-x top left;
+}
